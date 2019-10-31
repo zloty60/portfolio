@@ -1,0 +1,73 @@
+.project {
+  &--order-1 {
+    @include breakPoint(l) {
+      order: 1;
+    }
+  }
+  &--order-2 {
+    @include breakPoint(l) {
+      order: 2;
+    }
+  }
+  &--left {
+    @include breakPoint(l) {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+  &--mb {
+    margin-bottom: 85px;
+    @include breakPoint(m) {
+      margin-bottom: 140px;
+    }
+  }
+  &__img {
+    height: 100%;
+    img {
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+      border-radius: 5px;
+      display: block;
+      margin-bottom: 22px;
+    }
+  }
+  &__technology {
+    display: inline-block;
+    color: #303f9f;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-right: 6px;
+  }
+  &__title {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 22px;
+    font-size: 28px;
+    letter-spacing: 1px;
+    @include breakPoint(l) {
+      margin-block-start: 0;
+    }
+  }
+  &__description {
+    margin-top: 28px;
+    font-weight: 400;
+    color: #4e4848;
+    font-size: 16px;
+    line-height: 1.5;
+    font-style: italic;
+    text-align: justify;
+    letter-spacing: 0.6px;
+    @include breakPoint(l) {
+      max-width: 450px;
+    }
+  }
+  &__btn-wrapper {
+    display: flex;
+    justify-content: space-between;
+    @include breakPoint(m) {
+      display: block;
+      margin-top: 28px;
+      :first-child {
+        margin-right: 30px;
+      }
+    }
+  }
+}

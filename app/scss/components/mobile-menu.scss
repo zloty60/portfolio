@@ -1,0 +1,38 @@
+.mobile-menu {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2e4154;
+  display: none;
+  &--on {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @include breakPoint(m) {
+    display: none;
+  }
+  &__close-btn {
+    position: absolute;
+    top: 32px;
+    right: 33px;
+    background-color: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 40px;
+  }
+  &__item {
+    font-size: 22px;
+    font-family: "Josefin Sans", sans-serif;
+    color: #ffffff;
+    padding: 15px 0;
+    display: inline-block;
+  }
+  &__list {
+    margin-left: 70px;
+  }
+}

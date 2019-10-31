@@ -1,0 +1,80 @@
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.section-padding {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+a:focus,
+button:focus {
+  outline: 4px dotted #000000;
+}
+
+.section--grey-bg {
+  background-color: #f8f8f8;
+}
+
+.section__about {
+  @include breakPoint(m) {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.section__contact {
+  margin-top: 30px;
+  @include breakPoint(m) {
+    margin-top: 60px;
+  }
+}
+
+.section__skills {
+  margin-top: 60px;
+  &--mt-off {
+    margin-top: 0px;
+    @include breakPoint(m) {
+      margin-top: 60px;
+    }
+  }
+}
+
+.section__project {
+  margin-top: 60px;
+  align-items: center;
+  @include breakPoint(m) {
+    justify-content: center;
+  }
+  @include breakPoint(l) {
+    align-items: center;
+  }
+}
+
+.headline {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+  &::after {
+    content: "";
+    margin-top: 12px;
+    width: 150px;
+    height: 10px;
+    background-color: #ff5252;
+    display: block;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+}

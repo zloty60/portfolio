@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "cssnano": "^4.1.10",
+    "sass": "^1.23.2"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.6.3",
+    "normalize.css": "^8.0.1"
+  }
+}

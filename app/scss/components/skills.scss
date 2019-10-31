@@ -1,0 +1,67 @@
+.skills {
+  background-color: #ffffff;
+  padding: 25px 27px 50px;
+  // height zeby wysokośc miedzy każdym była taka sama
+  height: 100%;
+  font-family: "Josefin Sans", sans-serif;
+  border-top: 4px solid #918cb8;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px -5px;
+  &--mobile {
+    margin-bottom: 40px;
+    @include breakPoint(m) {
+      // margin-bottom: 0;
+    }
+  }
+  &--green {
+    border-top-color: #71b5a0;
+  }
+  &--gold {
+    border-top-color: #e8d5b5;
+  }
+  &--blue {
+    border-top-color: #3693ba;
+  }
+  &--grey {
+    border-top-color: #aca9bb;
+  }
+  &--red {
+    border-top-color: #d75c60;
+  }
+  &__name {
+    color: #4e5ba9;
+    color: #151f58;
+  }
+
+  &__item {
+    color: #888d99;
+    line-height: 1.5;
+  }
+  &__icon {
+    font-size: 40px;
+    position: absolute;
+    bottom: 15px;
+    right: 27px;
+    color: #918cb8;
+    &--green {
+      color: #71b5a0;
+    }
+    &--gold {
+      color: #e8d5b5;
+    }
+    &--blue {
+      color: #3693ba;
+    }
+    &--grey {
+      color: #aca9bb;
+    }
+    &--red {
+      color: #d75c60;
+    }
+    &--react {
+      height: 40px;
+      width: auto;
+    }
+  }
+}

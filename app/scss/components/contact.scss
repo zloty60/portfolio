@@ -1,0 +1,16 @@
+.contact {
+  &__name {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 22px;
+  }
+  &__value {
+    font-size: 18px;
+    color: #727276;
+    &--link {
+      color: #727276;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

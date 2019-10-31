@@ -1,0 +1,126 @@
+.header {
+  background-color: #303f9f;
+  background-image: linear-gradient(
+    to right,
+    #273381,
+    #293688,
+    #2b3990,
+    #2e3c97,
+    #303f9f
+  );
+  height: 100vh;
+  overflow-y: auto;
+  @include breakPoint(m) {
+    background-image: url("/app/assets/img/bg.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: auto;
+    max-height: 730px;
+  }
+
+  @include breakPoint(l) {
+    display: flex;
+    align-items: center;
+  }
+
+  .container {
+    flex-grow: 1;
+  }
+  &__text-wrapper {
+    text-align: center;
+    margin-top: 100px;
+    line-height: 1.4;
+    font-family: "Josefin Sans", sans-serif;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+
+    @include breakPoint(l) {
+      margin-top: 0;
+      text-align: left;
+    }
+  }
+  &__title {
+    font-size: 60px;
+    span {
+      display: block;
+      @include breakPoint(m) {
+        display: inline-block;
+      }
+    }
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 3px;
+    @include breakPoint(m) {
+      font-size: 55px;
+    }
+    @include breakPoint(l) {
+      font-size: 46px;
+    }
+    @include breakPoint(xl) {
+      font-size: 58px;
+    }
+  }
+  &__subtitle {
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 2px;
+    display: none;
+    @include breakPoint(m) {
+      font-size: 32px;
+      display: block;
+    }
+    @include breakPoint(l) {
+      font-size: 28px;
+    }
+    @include breakPoint(xl) {
+      font-size: 34px;
+    }
+  }
+  &__btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 36px;
+    @include breakPoint(m) {
+      display: block;
+    }
+    :first-child {
+      margin-bottom: 36px;
+      @include breakPoint(m) {
+        margin-right: 30px;
+      }
+    }
+    @include breakPoint(xl) {
+      margin-top: 39px;
+    }
+  }
+  &__img {
+    display: none;
+    @include breakPoint(m) {
+      display: block;
+      text-align: center;
+    }
+    @include breakPoint(l) {
+      position: relative;
+      top: 35px;
+    }
+
+    img {
+      @include breakPoint(m) {
+        margin-top: 40px;
+        width: 310px;
+      }
+      @include breakPoint(l) {
+        width: 365px;
+      }
+      @include breakPoint(xl) {
+        width: 100%;
+      }
+    }
+  }
+  &__tag {
+    width: 70px;
+    @include breakPoint(m) {
+      display: none;
+    }
+  }
+}

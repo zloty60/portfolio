@@ -1,0 +1,44 @@
+.navbar {
+  position: absolute;
+  width: 100%;
+  top: 15px;
+  height: 50px;
+  &__item {
+    padding-left: 25px;
+    padding-right: 25px;
+    &--mobile {
+      @include breakPoint(m) {
+        display: none;
+      }
+    }
+    &--desktop {
+      display: none;
+      @include breakPoint(m) {
+        display: block;
+      }
+    }
+  }
+  &__item--logo {
+    margin-right: auto;
+  }
+  &__link {
+    color: #e6e6e6;
+    font-weight: 300;
+    transition: color 0.2s;
+    &:hover {
+      color: #ffffff;
+    }
+  }
+
+  &__link--github {
+    font-size: 30px;
+  }
+
+  &__list {
+    height: 50px;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}

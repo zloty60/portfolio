@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700|Montserrat:300,400,400i,700&display=swap&subset=latin-ext");
+@import "normalize.css";
+@import "./grid/breakPoint.scss";
+@import "./grid/container.scss";
+@import "./grid/grid.scss";
+@import "./components/common.scss";
+@import "./components/navbar.scss";
+@import "./components/mobile-menu.scss";
+@import "./components//header.scss";
+@import "./components/button.scss";
+@import "./components//about.scss";
+@import "./components/skills.scss";
+@import "./components/project.scss";
+@import "./components/contact.scss";
+@import "./components/footer.scss";
+@import "./components/scroll-top.scss";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+ul {
+  //padding-inline-start: 0;
+  padding-left: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}

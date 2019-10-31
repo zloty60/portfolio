@@ -1,0 +1,18 @@
+.scroll-top {
+  display: none !important;
+  background-color: #e95184;
+  width: 55px;
+  height: 55px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__icon {
+    color: #293688;
+    font-size: 30px;
+  }
+}
