@@ -13,6 +13,7 @@
     @if $size == null {
       .col-#{$i} {
         flex: 0 0 percentage($i / $columns);
+        max-width: percentage($i / $columns);
         // padding-left: $gap;
         // padding-right: $gap;
       }
@@ -22,6 +23,7 @@
           flex: 0 0 percentage($i / $columns);
           padding-left: $gap;
           padding-right: $gap;
+          max-width: percentage($i / $columns);
         }
       }
     }

@@ -6,6 +6,11 @@
   },
   "dependencies": {
     "@babel/preset-env": "^7.6.3",
-    "normalize.css": "^8.0.1"
+    "autoprefixer": "^9.7.1",
+    "normalize.css": "^8.0.1",
+    "postcss-modules": "^1.4.1"
+  },
+  "scripts": {
+    "build": "parcel build index.html --out-dir docs --public-url ./"
   }
 }
