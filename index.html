@@ -415,8 +415,47 @@
             </div>
           </div>
         </div>
-        <div class="row section__project ">
+        <div class="row section__project project--mb ">
           <div class="col-12 col-m-10 col-l-6">
+            <div class="project__img">
+              <img
+                src="./app/assets/img/projects/landing_page.png"
+                alt="obrazek przedstawiający projekt"
+              />
+            </div>
+          </div>
+          <div class="col-12 col-m-10 col-l-6 project--left">
+            <div class="project">
+              <h3 class="project__title">Landing page</h3>
+              <ul>
+                <li class="project__technology">
+                  Scss
+                </li>
+                <li class="project__technology">Webpack</li>
+              </ul>
+              <p class="project__description">
+                Landing page stworzony na podstawie projektu graficznego. Przy
+                tworzeniu strony zastosowałem metodologie BEM, a także użyłem
+                narzędzia Webpack.
+              </p>
+              <div class="project__btn-wrapper">
+                <a
+                  href="https://github.com/zloty60/landing_page"
+                  class="button button--orange-light button--m"
+                >
+                  code
+                </a>
+                <a
+                  href="https://zloty60.github.io/landing_page"
+                  class="button button--green button--m"
+                  >live</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row section__project">
+          <div class="col-12 col-m-10 col-l-6 project--order-2">
             <div class="project__img">
               <img
                 src="./app/assets/img/projects/kanban.png"
@@ -424,7 +463,7 @@
               />
             </div>
           </div>
-          <div class="col-12 col-m-10 col-l-6 project--left">
+          <div class="col-12 col-m-10 col-l-6 project--order-1 ">
             <div class="project">
               <h3 class="project__title">jQuery Kanban</h3>
               <ul>
@@ -432,11 +471,12 @@
                   JavaScript
                 </li>
                 <li class="project__technology">jQuery</li>
+              
               </ul>
               <p class="project__description">
                 Tablica kanban projekt, w którym możemy dodawać,usuwać nowe
                 kolumny, uzupełnić je treścią. Tworząc projekt wykorzystałem
-                biblioteke jQuery
+                biblioteke jQuery.
               </p>
               <div class="project__btn-wrapper">
                 <a
@@ -454,7 +494,6 @@
             </div>
           </div>
         </div>
-      </div>
     </section>
     <section class="section-padding section--grey-bg" id="kontakt">
       <div class="container">
