@@ -1,18 +1,40 @@
 .scroll-top {
-  display: none !important;
-  background-color: #e95184;
-  width: 55px;
-  height: 55px;
+  display: none;
+  border: none;
+  cursor: pointer;
+  background-color: #607d8b;
+  width: 44px;
+  height: 44px;
   position: fixed;
-  bottom: 50px;
-  right: 50px;
+  z-index: 10;
+  bottom: 20px;
+  right: 15px;
   border-radius: 50%;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-  display: flex;
+  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.32);
   align-items: center;
   justify-content: center;
+  transition: transform 0.2s;
+  &:hover {
+    transform: translateY(1px);
+  }
+  @include breakPoint(m) {
+    width: 50px;
+    height: 50px;
+    bottom: 25px;
+    right: 22px;
+  }
+  @include breakPoint(l) {
+    bottom: 30px;
+    right: 26px;
+  }
   &__icon {
-    color: #293688;
-    font-size: 30px;
+    color: #fdfdfd;
+    font-size: 28px;
+    @include breakPoint(m) {
+      font-size: 29px;
+    }
+  }
+  &--show {
+    display: flex;
   }
 }

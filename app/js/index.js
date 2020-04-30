@@ -1,3 +1,5 @@
+import ScrollTop from "./modules/ScrollTop";
+
 const openMenuBtn = document.querySelector("#open-menu-btn-js");
 const closeMenuBtn = document.querySelector("#close-menu-btn-js");
 const menuContent = document.querySelector("#mobile-menu-js");
@@ -14,4 +16,6 @@ function menuClose() {
 openMenuBtn.addEventListener("click", menuOpen);
 closeMenuBtn.addEventListener("click", menuClose);
 
-menuMobileLinks.forEach(el => el.addEventListener("click", menuClose));
+menuMobileLinks.forEach((el) => el.addEventListener("click", menuClose));
+
+new ScrollTop();
