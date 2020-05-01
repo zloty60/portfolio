@@ -1,21 +1,13 @@
 import ScrollTop from "./modules/ScrollTop";
+import Navbar from "./modules/Navbar";
+import MobileMenu from "./modules/MobileMenu";
 
-const openMenuBtn = document.querySelector("#open-menu-btn-js");
-const closeMenuBtn = document.querySelector("#close-menu-btn-js");
-const menuContent = document.querySelector("#mobile-menu-js");
-const menuMobileLinks = document.querySelectorAll(".mobile-menu__item");
-
-function menuOpen() {
-  menuContent.classList.add("mobile-menu--on");
+function startJs() {
+  window.addEventListener("DOMContentLoaded", () => {
+    new ScrollTop();
+    new Navbar();
+    new MobileMenu();
+  });
 }
 
-function menuClose() {
-  menuContent.classList.remove("mobile-menu--on");
-}
-
-openMenuBtn.addEventListener("click", menuOpen);
-closeMenuBtn.addEventListener("click", menuClose);
-
-menuMobileLinks.forEach((el) => el.addEventListener("click", menuClose));
-
-new ScrollTop();
+startJs();

@@ -757,33 +757,154 @@ function () {
 
 var _default = ScrollTop;
 exports.default = _default;
-},{"lodash/throttle":"node_modules/lodash/throttle.js"}],"app/js/index.js":[function(require,module,exports) {
+},{"lodash/throttle":"node_modules/lodash/throttle.js"}],"app/js/modules/Navbar.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _throttle = _interopRequireDefault(require("lodash/throttle"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var Navbar =
+/*#__PURE__*/
+function () {
+  function Navbar() {
+    _classCallCheck(this, Navbar);
+
+    this.scrollBtn = document.querySelector("#navbar-js");
+    this.events();
+    this.prevScrollpos = window.pageYOffset;
+  }
+
+  _createClass(Navbar, [{
+    key: "events",
+    value: function events() {
+      var _this = this;
+
+      window.addEventListener("scroll", (0, _throttle.default)(function () {
+        return _this.showBtn();
+      }, 200));
+    }
+  }, {
+    key: "showBtn",
+    value: function showBtn() {
+      var currentScrollPos = window.pageYOffset;
+
+      if (window.scrollY > 70) {
+        this.scrollBtn.style.top = "-55px";
+
+        if (this.prevScrollpos > currentScrollPos) {
+          this.scrollBtn.style.top = "0px";
+          this.scrollBtn.classList.add("navbar--fixed");
+        } else {
+          this.scrollBtn.style.top = "-55px";
+        }
+      } else {
+        this.scrollBtn.style.top = "15px";
+        this.scrollBtn.classList.remove("navbar--fixed");
+      }
+
+      this.prevScrollpos = currentScrollPos;
+    }
+  }]);
+
+  return Navbar;
+}();
+
+var _default = Navbar;
+exports.default = _default;
+},{"lodash/throttle":"node_modules/lodash/throttle.js"}],"app/js/modules/MobileMenu.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var MobileMenu =
+/*#__PURE__*/
+function () {
+  function MobileMenu() {
+    _classCallCheck(this, MobileMenu);
+
+    this.openMenuBtn = document.querySelector("#open-menu-btn-js");
+    this.closeMenuBtn = document.querySelector("#close-menu-btn-js");
+    this.menuContent = document.querySelector("#mobile-menu-js");
+    this.menuMobileLinks = document.querySelectorAll(".mobile-menu__item");
+    this.events();
+  }
+
+  _createClass(MobileMenu, [{
+    key: "events",
+    value: function events() {
+      var _this = this;
+
+      this.openMenuBtn.addEventListener("click", function () {
+        return _this.menuOpen();
+      });
+      this.closeMenuBtn.addEventListener("click", function () {
+        return _this.menuClose();
+      });
+      this.menuMobileLinks.forEach(function (el) {
+        return el.addEventListener("click", function () {
+          return _this.menuClose();
+        });
+      });
+    }
+  }, {
+    key: "menuOpen",
+    value: function menuOpen() {
+      this.menuContent.classList.add("mobile-menu--on");
+    }
+  }, {
+    key: "menuClose",
+    value: function menuClose() {
+      this.menuContent.classList.remove("mobile-menu--on");
+    }
+  }]);
+
+  return MobileMenu;
+}();
+
+var _default = MobileMenu;
+exports.default = _default;
+},{}],"app/js/index.js":[function(require,module,exports) {
 "use strict";
 
 var _ScrollTop = _interopRequireDefault(require("./modules/ScrollTop"));
 
+var _Navbar = _interopRequireDefault(require("./modules/Navbar"));
+
+var _MobileMenu = _interopRequireDefault(require("./modules/MobileMenu"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var openMenuBtn = document.querySelector("#open-menu-btn-js");
-var closeMenuBtn = document.querySelector("#close-menu-btn-js");
-var menuContent = document.querySelector("#mobile-menu-js");
-var menuMobileLinks = document.querySelectorAll(".mobile-menu__item");
-
-function menuOpen() {
-  menuContent.classList.add("mobile-menu--on");
+function startJs() {
+  window.addEventListener("DOMContentLoaded", function () {
+    new _ScrollTop.default();
+    new _Navbar.default();
+    new _MobileMenu.default();
+  });
 }
 
-function menuClose() {
-  menuContent.classList.remove("mobile-menu--on");
-}
-
-openMenuBtn.addEventListener("click", menuOpen);
-closeMenuBtn.addEventListener("click", menuClose);
-menuMobileLinks.forEach(function (el) {
-  return el.addEventListener("click", menuClose);
-});
-new _ScrollTop.default();
-},{"./modules/ScrollTop":"app/js/modules/ScrollTop.js"}],"C:/Users/Przem/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+startJs();
+},{"./modules/ScrollTop":"app/js/modules/ScrollTop.js","./modules/Navbar":"app/js/modules/Navbar.js","./modules/MobileMenu":"app/js/modules/MobileMenu.js"}],"C:/Users/Przem/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -811,7 +932,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61170" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53321" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

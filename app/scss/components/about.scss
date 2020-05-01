@@ -1,11 +1,13 @@
 .about {
   &__img {
     margin-bottom: 45px;
-    @include breakPoint(l) {
+    @include breakPoint(s) {
       margin-bottom: 0;
+      display: none;
     }
     @include breakPoint(xl) {
-      width: 450px;
+      display: block;
+      width: 515px;
     }
   }
   &__description {

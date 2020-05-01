@@ -96,10 +96,11 @@
   &__img {
     display: none;
     @include breakPoint(m) {
-      display: block;
-      text-align: center;
+      display: flex;
+      justify-content: center;
     }
     @include breakPoint(l) {
+      justify-content: flex-end;
       position: relative;
       top: 35px;
     }
@@ -107,13 +108,13 @@
     img {
       @include breakPoint(m) {
         margin-top: 40px;
-        width: 310px;
+        width: 280px;
       }
       @include breakPoint(l) {
-        width: 365px;
+        width: 320px;
       }
       @include breakPoint(xl) {
-        width: 100%;
+        width: 410px;
       }
     }
   }
