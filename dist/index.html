@@ -135,8 +135,9 @@
                 <li class="skills__item">- Redux</li>
                 <li class="skills__item">- React hooks</li>
                 <li class="skills__item">- React router</li>
-                <li class="skills__item">- Styled components</li>
                 <li class="skills__item">- Material UI</li>
+                <li class="skills__item">- Styled components</li>
+                <li class="skills__item">- Formik</li>
                 <img class="skills__icon skills__icon--react" src="/react.6ce1055b.svg" alt="">
               </ul>
             </div>
@@ -170,9 +171,10 @@
               <h3 class="skills__name">Narzędzia</h3>
               <ul class="skills__list">
                 <li class="skills__item">- Visual Studio Code</li>
-                <li class="skills__item">- Adobe XD</li>
                 <li class="skills__item">- Git</li>
+                <li class="skills__item">- Firebase</li>
                 <li class="skills__item">- Parcel.js</li>
+                <li class="skills__item">- Adobe XD</li>
                 <i class="ion-settings skills__icon skills__icon--green"></i>
               </ul>
             </div>
@@ -181,9 +183,9 @@
             <div class="skills skills--red relative">
               <h3 class="skills__name">Zamierzam poznać</h3>
               <ul class="skills__list">
-                <li class="skills__item">- Angular / TypeScript</li>
+                <li class="skills__item">- TypeScript</li>
+                <li class="skills__item">- Angular</li>
                 <li class="skills__item">- Node.js / Express.js</li>
-                <li class="skills__item">- Python</li>
                 <li class="skills__item">- React Native</li>
                 <li class="skills__item">- C# / .Net Core</li>
               </ul>
@@ -204,10 +206,41 @@
         <div class="row section__project project--mb">
           <div class="col-12 col-m-10 col-l-6">
             <div class="project__img">
-              <img src="/pokedex.86f735b2.png" alt="obrazek przedstawiający projekt">
+              <img src="/it-jobs.f3fbb412.png" alt="obrazek przedstawiający projekt">
             </div>
           </div>
           <div class="col-12 col-m-10 col-l-6 project--left">
+            <div class="project">
+              <h3 class="project__title">IT Jobs</h3>
+              <ul>
+                <li class="project__technology">
+                  React
+                </li>
+                <li class="project__technology">Redux</li>
+                <li class="project__technology">Firebase</li>
+              </ul>
+              <p class="project__description">
+                IT Jobs to portal z ofertami pracy dla branży IT. Aplikacja na głównej stronie wyświetla
+                listę wszystkich ogłoszeń, po kliknięciu w dane ogłoszenie, przechodzimy do szczegółowego widoku
+                oferty. Możliwość dodawania ogłoszeń jest dostępna tylko dla zalogowanych użytkowników. Projekt jest stale rozwijany.
+              </p>
+              <div class="project__btn-wrapper">
+                <a href="https://github.com/zloty60/it-jobs" class="button button--orange-light button--m">
+                  code
+                </a>
+                <a href="https://it-jobs-8fe97.firebaseapp.com" class="button button--green button--m">live</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row section__project project--mb">
+          <div class="col-12 col-m-10 col-l-6 project--order-2">
+            <div class="project__img">
+              <img src="/pokedex.86f735b2.png" alt="obrazek przedstawiający projekt">
+            </div>
+          </div>
+          <div class="col-12 col-m-10 col-l-6 project--order-1">
             <div class="project">
               <h3 class="project__title">Pokedex</h3>
               <ul>
@@ -221,13 +254,44 @@
                 Aplikacja na głównej stronie wyświetla listę wszystkich pokemonów, na samym dole
                 mamy dostepną paginację. Pokemony możemy filtrować ze wzgęldu na ich typ, oraz sortować
                 alfabetycznie. Klikając na danego pokemona dostępny jest jego szczegółowy widok. Aplikacja posiada także
-                możliwość wyszukiwania pokemonów po nazwie.   
+                możliwość wyszukiwania pokemonów po nazwie.
               </p>
               <div class="project__btn-wrapper">
                 <a href="https://github.com/zloty60/pokedex" class="button button--orange-light button--m">
                   code
                 </a>
                 <a href="https://zloty60.github.io/pokedex/#/" class="button button--green button--m">live</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row section__project project--mb">
+          <div class="col-12 col-m-10 col-l-6">
+            <div class="project__img">
+              <img src="/zonex.193ea2d4.png" alt="obrazek przedstawiający projekt">
+            </div>
+          </div>
+          <div class="col-12 col-m-10 col-l-6 project--left">
+            <div class="project">
+              <h3 class="project__title">
+                Landing page</h3>
+              <ul>
+                <li class="project__technology">
+                  Scss
+                </li>
+                <li class="project__technology">Webpack</li>
+                <li class="project__technology">JavaScript</li>
+              </ul>
+              <p class="project__description">
+                Projekt wykonany w ramach kursu DaftAcademy Front-end Level-up. Klasyczny landing page zakodowany na podstawie projektu graficznego.
+                Do zbudowania strony użyłem webpack, do pozycjonowania elementów użyłem gotowego grida z bootstrap.
+              </p>
+              <div class="project__btn-wrapper">
+                <a href="https://github.com/zloty60/daft_academy_front-end" class="button button--orange-light button--m">
+                  code
+                </a>
+                <a href="https://zloty60.github.io/daft_academy_front-end/" class="button button--green button--m">live</a>
               </div>
             </div>
           </div>
@@ -326,69 +390,6 @@
                   code
                 </a>
                 <a href="https://zloty60.github.io/react_kanban_app/" class="button button--green button--m">live</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-                <div class="row section__project project--mb">
-          <div class="col-12 col-m-10 col-l-6">
-            <div class="project__img">
-              <img src="/zonex.193ea2d4.png" alt="obrazek przedstawiający projekt">
-            </div>
-          </div>
-          <div class="col-12 col-m-10 col-l-6 project--left">
-            <div class="project">
-              <h3 class="project__title">
-                Landing page</h3>
-              <ul>
-                <li class="project__technology">
-                  Scss
-                </li>
-                <li class="project__technology">Webpack</li>
-                <li class="project__technology">JavaScript</li>
-              </ul>
-              <p class="project__description">
-                Projekt wykonany w ramach kursu DaftAcademy Front-end Level-up. Klasyczny landing page zakodowany na podstawie projektu graficznego.
-                Do zbudowania strony użyłem webpack, do pozycjonowania elementów użyłem gotowego grida z bootstrap.
-              </p>
-              <div class="project__btn-wrapper">
-                <a href="https://github.com/zloty60/daft_academy_front-end" class="button button--orange-light button--m">
-                  code
-                </a>
-                <a href="https://zloty60.github.io/daft_academy_front-end/" class="button button--green button--m">live</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-        <div class="row section__project project--mb">
-          <div class="col-12 col-m-10 col-l-6 project--order-2">
-            <div class="project__img">
-              <img src="/portfolio.29d2389a.png" alt="obrazek przedstawiający projekt">
-            </div>
-          </div>
-          <div class="col-12 col-m-10 col-l-6 project--order-1">
-            <div class="project">
-              <h3 class="project__title">Strona Portfolio</h3>
-              <ul>
-                <li class="project__technology">
-                  Html
-                </li>
-                <li class="project__technology">Scss</li>
-              </ul>
-              <p class="project__description">
-                Strona na której obecnie się znajdujesz, do pozycjonowania
-                elementów stworzyłem własny grid. Przy tworzeniu strony
-                korzystałem z preprocesora styli Sass (Scss).
-              </p>
-              <div class="project__btn-wrapper">
-                <a href="https://github.com/zloty60/portfolio" class="button button--orange-light button--m">
-                  code
-                </a>
-                <a href="https://zloty60.github.io/portfolio" class="button button--green button--m">live</a>
               </div>
             </div>
           </div>

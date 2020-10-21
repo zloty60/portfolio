@@ -1,13 +1,13 @@
 {
   "devDependencies": {
-    "@babel/core": "^7.9.0",
+    "@babel/core": "^7.12.3",
     "cssnano": "^4.1.10",
-    "sass": "^1.26.5"
+    "sass": "^1.27.0"
   },
   "dependencies": {
-    "@babel/preset-env": "^7.9.5",
-    "autoprefixer": "^9.7.6",
-    "lodash": "^4.17.15",
+    "@babel/preset-env": "^7.12.1",
+    "autoprefixer": "^9.8.6",
+    "lodash": "^4.17.20",
     "normalize.css": "^8.0.1",
     "postcss-modules": "^1.5.0"
   },
